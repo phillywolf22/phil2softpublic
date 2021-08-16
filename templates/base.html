@@ -1,0 +1,33 @@
+<!-- templates/base.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% assets 'main_css' %}
+        <link rel="stylesheet" href="{{ ASSET_URL }}">
+        {% endassets %}
+
+        <title>Flask + TailwindCSS + Flask-Assets</title>
+    </head>
+    <body>
+        <nav class="bg-grey-100 fixed">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="flex justify-between">
+                    test navbar
+                </div>
+
+            </div>
+
+        </nav>
+        <div class="bg-green-300 px-3 py-1">
+            <h2 class="text-3xl font-light text-white
+                text-center
+                m-0">P2Soft Inc.</h2>
+            <p class="text-center">We deliver software solutions.</p>
+        </div>
+        {% block content %}{% endblock content %}
+    </body>
+</html>
